@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TDV-Cửa Hàng Cầu Lông Chuyên Nghiệp Chất Lượng</title>
+    <link rel="shortcut icon" href="../public/images/logo1-removebg.png" type="image/x-icon"  >
+
+
+    <!--link to CSS -->
+    <link rel="stylesheet" href="../public/css/style.css">
+    
+    <link rel="stylesheet" href="../public/css/badminton.css">
+
+    <!--Box icons-->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!--Font-awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!--Owl carousel-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+
+    <!--link to fonts-google-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <%- include('header') %> 
+
+    <!--Scroll To Top-->
+    <div class="btnScrollToTop" >
+        <i class="material-icons">arrow_upward</i>
+    </div>
+
+
+    <!--Slider-->
+    <div class="slider" >
+
+        <div class="myslider fade" style="display: block;">
+            <img src="../public/images/banner-home.webp" alt="">
+        </div>
+
+        <div class="myslider fade">
+            <img src="../public/images/slider-5.webp" alt="">
+        </div>
+
+        <div class="myslider fade">
+            
+            <img src="../public/images/post2.webp" alt="">
+        </div>
+
+        <div class="myslider fade">
+            
+            <img src="../public/images/slider-4.webp" alt="">
+        </div>
+
+        <a class="prev" >&#10094;</a>
+        <a class="next" >&#10095;</a>
+
+        <div class="dotsbox" style="text-align: center;">
+            <span class="dot" onclick="currentSlider(1)"></span>
+            <span class="dot" onclick="currentSlider(2)"></span>
+            <span class="dot" onclick="currentSlider(3)"></span>
+            <span class="dot" onclick="currentSlider(4)"></span>
+        </div>
+
+
+    </div>
+    
+    <!--Shop -->
+    <section class="shop container">
+        <h2 class="section-title" >Bán Chạy</h2>
+        <!--Content-->
+
+       
+        
+
+        <div class="shop-content">
+            <!--Box 1-->
+            <div class="col3" data-category="yonex" data-price="1500" data-weight="2U" data-style="attack" data-stone="cung" data-date ="2023-08-20">
+                <div class="item_product_main">
+                    <div class="products-img">
+                        <a href="/product/yonex-astrox-88d" target="_blank">
+                            <img src="../public/images/yonex-88d-pro.webp" alt="" >
+                        </a>
+                        <button class="add-to-cart add-cart"><i class='bx bx-cart'></i></button>
+                    </div>
+                    <div class="sale-off">
+                        <h4>-12%</h4>
+                    </div>
+                    <div class="products-info">
+                        <div class="products-name">
+                            <a href="/product/yonex-astrox-88d" target="_blank">VỢT CẦU LÔNG YONEX ASTROX 88D PRO</a>
+                            <span ><em>923 lượt bán</em></span>
+
+                        </div>
+                        <div class="products-price">
+                            <span class="price">1.800.000 đ</span>
+                            <span class="compare-price">2.590.000 đ</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Box 2-->
+            <div class="col3" data-category="yonex" data-price="2200" data-weight="4U" data-style="defense" data-stone="deo" data-date ="2023-06-10">
+                <div class="item_product_main">
+                    <div class="products-img">
+                        <a href="/product/yonex-astrox-88d" target="_blank">
+                            <img src="../public/images/yonex-astrox-02-feel.webp" alt="" >
+                            
+
+                        </a>
+                        <button class="add-to-cart add-cart"><i class='bx bx-cart'></i></button>
+
+                    </div>
+                    <div class="sale-off">
+                        <h4>-21%</h4>
+                    </div>
+                    <div class="products-info">
+                        <div class="products-name">
+                            <a href="/product/yonex-astrox-88d" target="_blank">VỢT CẦU LÔNG YONEX ASTROX 02 FEEL</a>
+                            <span ><em>832 lượt bán</em></span>
+
+                        </div>
+                        <div class="products-price">
+                            <span class="price">2.200.000 đ</span>
+                            <span class="compare-price">2.800.000 đ</span>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Box 3-->
+            <div class="col3" data-category="apacs" data-price="1879" data-weight="2U" data-style="attack" data-stone="deo" data-date="2023-12-05">
+                <div class="item_product_main">
+                    <div class="products-img">
+                        <a href="/product/yonex-astrox-88d" target="_blank">
+                            <img src="../public/images/apacs-pro-commander.webp" alt="" >
+                        </a>
+                        <button class="add-to-cart add-cart"><i class='bx bx-cart' ></i></button>
+
+                    </div>
+                    <div class="sale-off">
+                        <h4>-23%</h4>
+                    </div>
+                    <div class="products-info">
+                        <div class="products-name">
+                            <a href="/product/yonex-astrox-88d" target="_blank">VỢT CẦU LÔNG APACS PRO COMMANDER</a>
+                            <span style="padding-left: 20px;"><em>532 lượt bán</em></span>
+                        </div>
+                        <div class="products-price">
+                            <span class="price">1.879.000 ₫</span>
+                            <span class="compare-price">2.590.000 đ</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Box 4-->
+            <div class="col3"  data-category="lining" data-price="5200" data-weight="3U" data-style="attack" data-stone="deo" data-date="2024-05-12">
+                <div class="item_product_main">
+                    <div class="products-img">
+                        <a href="/product/yonex-astrox-88d" target="_blank">
+                            <img src="../public/images/lining-halbertec-9000.webp" alt="" >
+                        </a>
+                        <button class="add-to-cart add-cart" ><i class='bx bx-cart' ></i></button>
+
+                    </div>
+                    <div class="sale-off">
+                        <h4>-40%</h4>
+                    </div>
+                    <div class="products-info">
+                        <div class="products-name">
+                            <a href="/product/yonex-astrox-88d" target="_blank">Vợt Cầu Lông Lining Halbertec 9000</a>
+                            <span ><em>732 lượt bán</em></span>
+                        </div>
+                        <div class="products-price">
+                            <span class="price">5.200.000 ₫</span>
+                            <span class="compare-price">2.590.000 đ</span>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Box 5-->
+            <div class="col3" data-category="mizuno" data-price="1750" data-weight="2U" data-style="attack" data-stone="cung" data-date="2023-05-12">
+                <div class="item_product_main">
+                    <div class="products-img">
+                        <a href="/product/yonex-astrox-88d" target="_blank">
+                            <img src="../public/images/mizuno-promax-rx9.webp" alt="" >
+                        </a>
+                        <button class="add-to-cart add-cart"><i class='bx bx-cart' ></i></button>
+
+                    </div>
+                    <div class="sale-off">
+                        <h4>-19%</h4>
+                    </div>
+                    <div class="products-info">
+                        <div class="products-name">
+                            <a href="/product/yonex-astrox-88d" target="_blank">VỢT CẦU LÔNG MIZUNO PROMAX RX9</a>
+                            <span ><em>122 lượt bán</em></span>
+                        </div>
+                        <div class="products-price">
+                            <span class="price">1.750.000 đ</span>
+                            <span class="compare-price">2.100.000 đ</span>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Box 6-->
+            <div class="col3"   data-category="victor" data-price="970" data-weight="4U" data-style="balanced" data-stone="trungbinh" data-date="2024-06-12">
+                <div class="item_product_main" >
+                    <div class="products-img">
+                        <a href="/product/yonex-astrox-88d" target="_blank">
+                            <img src="../public/images/victor-tk-fh-tim.jpg" alt="" >
+                        </a>
+                        <button class="add-to-cart add-cart"><i class='bx bx-cart' ></i></button>
+                        
+                    </div>
+                    <div class="sale-off">
+                        <h4>-10%</h4>
+                    </div>
+                    <div class="products-info">
+                        <div class="products-name">
+                            <a href="/product/yonex-astrox-88d" target="_blank">Vợt Cầu Lông Victor TK-FH Tím</a>
+                            <span ><em>332 lượt bán</em></span>
+
+                        </div>
+                        <div class="products-price">
+                            <span class="price">970.000 ₫</span>
+                            <span class="compare-price">1.164.000 ₫</span>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Box 7-->
+            <div class="col3" data-category="lining" data-price="1300" data-weight="3gU" data-style="defense" data-stone="deo" data-date="2024-02-18">
+                <div class="item_product_main">
+                    <div class="products-img">
+                        <a href="/product/yonex-astrox-88d" target="_blank">
+                            <img src="../public/images/lining-bladex-200.webp" alt="" >
+                        </a> 
+                        <button class="add-to-cart add-cart"><i class='bx bx-cart'></i></button>
+                    </div>
+                    <div class="sale-off">
+                        <h4>-48%</h4>
+                    </div>
+                    <div class="products-info">
+                        <div class="products-name">
+                            <a href="/product/yonex-astrox-88d" target="_blank">Vợt Cầu Lông Lining Bladex 200</a>
+                            <span ><em>232 lượt bán</em></span>
+
+                        </div>
+                        <div class="products-price">
+                            <span class="price">1.300.000 ₫</span>
+                            <span class="compare-price">2.590.000 đ</span>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Box 8-->
+            <div class="col3" data-category="victor" data-price="3600" data-weight="4U" data-style="balanced" data-stone="trungbinh" data-date="2023-10-18">
+                <div class="item_product_main">
+                    <div class="products-img">
+                        <a href="/product/yonex-astrox-88d" target="_blank">
+                            <img src="../public/images/victor-ryuga-d.webp" alt="" >
+                        </a>
+                        <button class="add-to-cart add-cart"><i class='bx bx-cart' ></i></button>
+
+                    </div>
+                    <div class="sale-off">
+                        <h4>-15%</h4>
+                    </div>
+                    <div class="products-info">
+                        <div class="products-name">
+                            <a href="/product/yonex-astrox-88d" target="_blank">Vợt Cầu Lông Victor Ryuga D</a>
+                            <span ><em>132 lượt bán</em></span>
+
+                        </div>
+                        <div class="products-price">
+                            <span class="price">3.600.000 đ</span>
+                            <span class="compare-price">4.320.000 đ</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+
+    <!--OUR SERVICE-->
+    <div class="our-services">
+        <h1>Dịch Vụ Của Chúng Tôi</h1>
+        <div class="container-services">
+            <div class="service">
+                <img src="../public/images/free-shipping.png" alt="">
+                <h2>Giao hàng miễn phí</h2>
+                <p>Thanh toán khi nhận hàng</p>
+            </div>
+            <div class="service">
+                <img src="../public/images/credit-card.png" alt="">
+                <h2>Thanh toán tiện lợi</h2>
+                <p>Thanh toán với nhiều phương thức tích hợp</p>
+            </div>
+            <div class="service">
+                <img src="../public/images/quality.png" alt="">
+                <h2>Bảo đảm chất lượng</h2>
+                <p>Hoàn trả khi không vừa ý</p>
+            </div>
+        </div>
+        
+    </div>
+
+
+    <!--FEEDBACK FROM GUEST-->
+    <div class="testimonials-section">
+        <div class="section-header">
+            <h1>Đánh Giá của khách hàng</h1>
+        </div>
+
+        <!--Owl carousel slider starts-->
+        <div class="owl-carousel owl-theme testimonials-container">
+            <!--Item start-->
+            <div class="item testimonials-card">
+                <main class="test-card-body">
+                    <div class="quote">
+                        <i class="fa fa-quote-left"></i>
+                    </div>
+                    <p>Vợt cầu lông ở đây rất đa dạng và phong phú. Mình đã tìm thấy nhiều dòng vợt từ những thương hiệu nổi tiếng như Yonex, Victor, Lining, ... Sản phẩm rất chất lượng, đáp ứng đúng nhu cầu và mong đợi của mình.</p>
+                    <div class="rating">
+                        <i class="fa-solid fa-star five"></i>
+                        <i class="fa-solid fa-star five"></i>
+                        <i class="fa-solid fa-star five"></i>
+                        <i class="fa-solid fa-star five"></i>
+                        <i class="fa-solid fa-star five"></i>
+                    </div>
+                </main>
+
+                <div class="profile">
+                    <div class="profile-img">
+                        <img src="../public/images/ava1.jpg" alt="">
+                    </div>
+                    <div class="profile-desc">
+                        <span>Đình Phúc</span>
+                        <span>Hải Dương</span>
+                    </div>
+                </div>
+            </div> 
+
+            <div class="item testimonials-card">
+                <main class="test-card-body">
+                    <div class="quote">
+                        <i class="fa fa-quote-left"></i>
+                    </div>
+                    <p>Vợt cầu lông Babolat VWX606 mang lại giá trị tuyệt vời so với giá thành. Chất lượng tốt, hiệu suất cao, và thiết kế đẹp. Đây thực sự là một sự đầu tư xứng đáng cho những ai yêu thích cầu lông.</p>
+                    <div class="rating">
+                        <i class="fa-solid fa-star five"></i>
+                        <i class="fa-solid fa-star five"></i>
+                        <i class="fa-solid fa-star five"></i>
+                        <i class="fa-solid fa-star five"></i>
+                        <i class="fa-solid fa-star "></i>
+                    </div>
+                </main>
+                <div class="profile">
+                    <div class="profile-img">
+                        <img src="../public/images/ava2.png" alt="">
+                    </div>
+                    <div class="profile-desc">
+                        <span>Minh Quang</span>
+                        <span>Thái Bình</span>
+                    </div>
+                </div>
+            </div> 
+
+            <div class="item testimonials-card">
+                <main class="test-card-body">
+                    <div class="quote">
+                        <i class="fa fa-quote-left"></i>
+                    </div>
+                    <p>Tôi rất thích vợt cầu lông MNO303 mà tôi mua từ shop. Trọng lượng nhẹ và dễ kiểm soát, giúp tôi tập luyện dễ dàng hơn. Độ căng dây phù hợp với phong cách chơi của tôi. Dịch vụ hỗ trợ khách hàng nhanh chóng và thân thiện. Rất đáng đồng tiền bát gạo!</p>
+                    <div class="rating">
+                        <i class="fa-solid fa-star five"></i>
+                        <i class="fa-solid fa-star five"></i>
+                        <i class="fa-solid fa-star five"></i>
+                        <i class="fa-solid fa-star five"></i>
+                        <i class="fa-solid fa-star five"></i>
+                    </div>
+                </main>
+                <div class="profile">
+                    <div class="profile-img">
+                        <img src="../public/images/ava3.png" alt="">
+                    </div>
+                    <div class="profile-desc">
+                        <span>Henry Nguyen</span>
+                        <span>Bình Dương</span>
+                    </div>
+                </div>
+            </div> 
+
+            <div class="item testimonials-card">
+                <main class="test-card-body">
+                    <div class="quote">
+                        <i class="fa fa-quote-left"></i>
+                    </div>
+                    <p>Tôi rất thích vợt cầu lông GHI101. Độ căng dây hoàn hảo, giúp tôi thực hiện những cú đánh mạnh mẽ mà vẫn giữ được độ chính xác. Shop còn tặng kèm một túi đựng vợt rất tiện lợi. Sẽ tiếp tục ủng hộ shop!</p>
+                    <div class="rating">
+                        <i class="fa-solid fa-star five"></i>
+                        <i class="fa-solid fa-star five"></i>
+                        <i class="fa-solid fa-star five"></i>
+                        <i class="fa-solid fa-star five"></i>
+                        <i class="fa-solid fa-star five"></i>
+                    </div>
+                </main>
+                <div class="profile">
+                    <div class="profile-img">
+                        <img src="../public/images/ava4.jpg" alt="">
+                    </div>
+                    <div class="profile-desc">
+                        <span>Nguyễn Vân</span>
+                        <span>Hà Nội</span>
+                    </div>
+                </div>
+            </div> 
+
+            <div class="item testimonials-card">
+                <main class="test-card-body">
+                    <div class="quote">
+                        <i class="fa fa-quote-left"></i>
+                    </div>
+                    <p>Tôi rất ấn tượng với thiết kế của vợt cầu lông Yonex PQR404. Màu sắc bắt mắt và đường nét tinh tế. Vợt nhẹ nhưng vẫn đảm bảo độ bền. Cầm rất chắc tay và thoải mái, ngay cả trong các trận đấu kéo dài.</p>
+                    <div class="rating">
+                        <i class="fa-solid fa-star five"></i>
+                        <i class="fa-solid fa-star five"></i>
+                        <i class="fa-solid fa-star five"></i>
+                        <i class="fa-solid fa-star five"></i>
+                        <i class="fa-solid fa-star "></i>
+                    </div>
+                </main>
+                <div class="profile">
+                    <div class="profile-img">
+                        <img src="../public/images/ava5.png" alt="">
+                    </div>
+                    <div class="profile-desc">
+                        <span>Đào Trúc</span>
+                        <span>Yên Bái</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item testimonials-card">
+                <main class="test-card-body">
+                    <div class="quote">
+                        <i class="fa fa-quote-left"></i>
+                    </div>
+                    <p>Nhân viên chăm sóc khách hàng rất nhiệt tình và chu đáo. Họ đã giải đáp mọi thắc mắc của tôi và giúp tôi chọn được cây vợt phù hợp nhất. Rất hài lòng với dịch vụ của shop</p>
+                    <div class="rating">
+                        <i class="fa-solid fa-star five"></i>
+                        <i class="fa-solid fa-star five"></i>
+                        <i class="fa-solid fa-star five"></i>
+                        <i class="fa-solid fa-star five"></i>
+                        <i class="fa-solid fa-star five"></i>
+                    </div>
+                </main>
+                <div class="profile">
+                    <div class="profile-img">
+                        <img src="../public/images/ava6.png" alt="">
+                    </div>
+                    <div class="profile-desc">
+                        <span>Trần Huy</span>
+                        <span>Hưng Yên</span>
+                    </div>
+                </div>
+            </div>   
+            <!--Item ends-->
+        </div>
+        <!--Owl carousel slider ends -->
+    </div>
+
+
+    <!-- overplay -->
+     <div class="overlay"></div>
+
+    <!--footer-->
+    <div class="footer">
+        <div class="foot-container">
+            <div class="row-footer">
+                <div class="footer-col">
+                    <h4>Thông tin chung</h4>
+                    <ul>
+                        <li><a href="">TDV là hệ thống cửa hàng cầu lông  cung cấp sỉ và lẻ các mặt hàng dụng cụ cầu lông từ phong trào tới chuyên nghiệp</a></li>
+                        <li><a href="">Châm ngôn <em>"Thể thao không chỉ là cuộc chơi, mà còn là cuộc sống."</em></a></li>
+                        <li><a href="">Tuyển dụng</a></li>
+                        <li><a href="">Câu hỏi thường gặp (FAQ)</a></li>
+
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Chính sách</h4>
+                    <ul>
+                        <li><a href="">Chính sách đổi trả, hoàn tiền</a></li>
+                        <li><a href="">Chính sách bảo hành</a></li>
+                        <li><a href="">Chính sách xử lí khiếu nại</a></li>
+                        <li><a href="">Chính sách vận chuyển</a></li>
+                        <li><a href="">Chính sách bảo mật thông tin</a></li>
+                        <li><a href="">Điều khoản sử dụng</a></li>
+
+
+
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Thông tin liên hệ</h4>
+                    <ul>
+                        <li><a href="">Địa chỉ: Hưng Yên, Việt Nam</a></li>
+                        <li><a href="">Số điện thoại: +8439424235</a></li>
+                        <li><a href="">Email: tdv@gmail.com</a></li>
+                        <li><a href="">Hợp tác kinh doanh: +8473427384</a></li>
+
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Theo dõi chúng tôi</h4>
+                    <div class="socials-link">
+                        <a href=""><i class="fab fa-facebook-f"></i></a>
+                        <a href=""><i class="fab fa-twitter"></i></a>
+                        <a href=""><i class="fab fa-instagram"></i></a>
+                        <a href=""><i class="fab fa-linkedin-in"></i></a>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7450.6609100230935!2d105.785584819274!3d20.979386717233954!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135accdd8a1ad71%3A0xa2f9b16036648187!2zSOG7jWMgdmnhu4duIEPDtG5nIG5naOG7hyBCxrB1IGNow61uaCB2aeG7hW4gdGjDtG5n!5e0!3m2!1svi!2s!4v1718166028751!5m2!1svi!2s" width="300" height="250" style="border:0;margin-top: 20px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.testimonials-container').owlCarousel({
+                loop:true,
+                margin:10,
+                autoplay:true,
+                autoplayTimeout:4000,
+                nav:true,
+                navText:["<i class='fa-solid fa-arrow-left'></i>",
+                        "<i class='fa-solid fa-arrow-right'></i>" ],
+                responsive:{
+                    0:{
+                        items:1
+                    },
+                    600:{
+                        items:2
+                    },
+                }
+            });
+
+            $('.add-cart').on('click',function(){
+                
+            })
+
+        
+
+
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.hero{
+    display: flex;
+    flex: 1;
+    width: 100%;
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0)), url(../images/background-login.avif);
+    margin-top: 50px;
+    background-position: center;
+    background-size: cover;
+    padding: 0px 10px;
+}
+
+.form-box{
+    width: 380px;
+    height:480px;
+    position: relative;
+    margin: 5% auto;
+    background:#F5F5DC ;
+    padding: 5px 10px;
+    overflow: hidden;
+}
+
+.button-box{
+    width: 100%;
+    margin:35px auto;
+    position: relative;
+    text-align: center;
+}
+
+
+
+.btn{
+    text-align: center;
+}
+
+
+
+
+.social-icons{
+    margin: 30px auto;
+    text-align: center;
+}
+
+.social-icons img{
+    width: 30px;
+    margin: 0px 12px;
+    box-shadow: 0 0 20px 0 #7f7f7f3d;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.input-gr{
+    top: 180px;
+    position: absolute;
+    width: 280px;
+    transition: 0.5s;
+
+}
+
+.input-mem{
+    width: 100%;
+    padding: 10px 12px;
+    margin: 6px 0px;
+    border: 1px solid #999;
+    outline: none;
+    background: transparent;
+    font-size: 15px;
+}
+.submit-btn{
+    width: 85%;
+    padding: 10px 30px;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    background: linear-gradient(to right, #007BFF , #ADD8E6);
+    outline: none;
+    border-radius: 30px;
+    border: none;
+}
+
+.submit-btn:hover{
+    cursor: pointer;
+    opacity: 0.9 ;
+    
+}
+.check-box {
+    font-size: 16px;
+    margin-top: 10px ;
+}
+
+
+span{
+    color: #777;
+    font-size: 15px;
+    bottom: 43px;
+    left: 20px;
+    position: absolute;
+    width: 400px;
+    
+
+}
+.toggle-btn{
+    padding: 10px;
+    width: 150px;
+    text-align: center;
+    margin: 0px 10px;
+    border: none;
+    cursor: pointer;
+    background-color: #fff;
+    transition: 0.5s ease;
+    color: #898989;
+    font-size: 18px;
+
+}
+.toggle-btn:hover{
+    cursor: pointer;
+    background-color: rgba(0,0,0,0.1);
+    color:#007BFF ;
+
+}
+
+.toggle-btn.toggle{
+    background-color: #007BFF;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.5s ease;
+
+}
+
+
+#login{
+    left: 50px;
+
+}
+#register{
+    display: none;
+    left: 50px;
+}
+
+
+
+#password{
+    position: relative;
+}
+
+.fa-regular{
+    position: absolute;
+    right: 8px;
+    bottom: 90px;
+}
+.hidden{
+    display: none;
+}
+.fa-regular .fa-eye-slash .hidden{
+    display: none;
+}

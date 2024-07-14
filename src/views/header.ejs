@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link rel="shortcut icon" href="../public/images/logo1-removebg.png" type="image/x-icon" >
+
+
+    <!--link to CSS -->
+    <link rel="stylesheet" href="../public/css/style.css">
+
+    <!--Box icons-->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!--Font-awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!--Owl carousel-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <!--Nav-->
+        <div class="nav container">
+            <div class="logo">
+                <a href="/">
+                <img src="../public/images/logo1.PNG" alt="" >
+                </a>
+            </div>
+            <ul class="head">
+                <li class="text"><a href="/" class="text-head">Trang chủ</a></li>
+                <li class="text"><a href="/badminton" class="text-head">Sản phẩm</a></li>
+                <li class="text"><a href="/news" class="text-head">Tin tức</a></li>
+                <li class="text"><a href="/add_user" class="text-head">Liên hệ</a></li>
+                <li>
+                    <div class="border-search">
+                        <input type="text" name="" id="" class="input" placeholder="Tìm kiếm sản phẩm... ">
+                        <button class="btn"><i class='bx bx-search'></i></button>
+                    </div>
+                </li>
+                <% if (!isAuthenticated) { %>
+                <li>
+                    <a href="/login">
+                        <i class='bx bxs-user user' ></i>
+                    </a>
+                </li>
+                <% } else  { %>
+                 <li>
+                    <a href="/logout">
+                        <i class="fa-solid fa-right-from-bracket logout"></i> 
+                    </a>
+                </li>
+                <%  } %>
+                <li> 
+                    <i class='bx bx-cart' id="cart-icon">
+                    <span id="cart-count">0</span>
+                </i> </li>
+            </ul>
+          
+
+            
+
+            <!--Cart -->
+            <div class="cart">
+                <h2 class="cart-title">Giỏ hàng của bạn</h2>
+                <!--Content-->
+                <div class="cart-content">
+
+                </div>
+
+                <!--Total-->
+                <div class="total">
+                    <div class="total-title">Tổng: </div>
+                    <div class="total-price">0 đ</div>
+                </div>
+
+                <!--Buy Button-->
+                <a href="/" style="list-style: none;color: black;"><button type="button" class="btn-buy">Mua Ngay</button></a>
+                <!--Cart close-->
+                <i class='bx bx-x' id="close-cart"></i>
+            </div>
+
+        </div>
+
+    </header>
+    <div class="overlay"></div>
+    <div class="notification" id="notification"> <i class="fa-solid fa-check"></i> Thêm sản phẩm thành công</div>
+    <script src="../public/js/main.js"></script>
+
+
+</body>

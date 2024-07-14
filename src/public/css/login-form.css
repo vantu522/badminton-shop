@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+.login-container{
+    display: flex;
+    align-items: center;
+    border: 1px solid;
+    width: 50%;
+    margin: 100px 300px;
+    padding: 50px 20px;
+}
+.login-img{
+    width: 400px;
+}
+.login-form{
+    padding: 0px 100px;
+    text-align: center;
+}
+
+.login-form input{
+    padding: 10px;
+    margin: 5px 0px;
+    width: 200px;
+}
+.login-form button {
+        padding: 5px;
+}
+
+
+
+
+
+
+
+
+

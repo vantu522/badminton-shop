@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Đăng Nhập</title>
+  <link rel="stylesheet" href="../public/css/login.css">
+  <link rel="shortcut icon" href="../public/images/logo1-removebg.png" type="image/x-icon" >
+
+
+</head>
+<body>
+    
+  <%- include('header') %>
+  
+  <div class="overlay"></div>
+  
+
+  <div class="hero">
+    <div class="form-box">
+        <div class="button-box">
+              <button type="button" class="toggle-btn toggle" id="loginBtn">Đăng nhập</button>
+              <button type="button" class="toggle-btn" id="registerBtn">Đăng kí</button>
+            
+
+        </div>
+        <div class="social-icons">
+            <img src="../public/images/fb.png" >
+            <img src="../public/images/gg.png" >
+            <img src="../public/images/ins.png" >
+    
+        </div>
+
+        <form action="/login" method="post" class="input-gr" id = "login">
+            <input type="text" class="input-mem" placeholder="Tên tài khoản" required>
+            <input type="password" class="input-mem" id="password" placeholder="Mật khẩu" required>
+            <i class="fa-regular fa-eye" id="togglePass" onclick="togglePassWord()" ></i>
+            <input type="checkbox" class="check-box">
+            <span>Ghi nhớ mật khẩu</span>
+            <button type="submit" class="submit-btn" requirea>Đăng nhập</button>
+        </form>
+        
+        <form action="" class="input-gr" id="register">
+          <input type="text" class="input-mem" placeholder="Tên tài khoản" required>
+          <input type="email" class="input-mem" placeholder="Mật khẩu" required>
+          <input type="text" class="input-mem" placeholder="Nhập lại mật khẩu" required>
+          <input type="checkbox" class="check-box">
+          <span>Đồng ý với các điều khoản và điều kiện</span>
+          <button type="submit" class="submit-btn" required>Đăng kí</button>
+      </form>
+    </div>
+ 
+  </div>
+  
+  <script>
+    
+
+  function togglePassWord(){
+
+    const iconToggle = document.getElementById('togglePass');
+    const passToggle = document.getElementById('password');
+
+    if(passToggle.type === "password"){
+      iconToggle.classList.remove('fa-eye');
+      iconToggle.classList.add('fa-eye-slash');
+      passToggle.type = "text";
+    } else{
+      iconToggle.classList.remove('fa-eye-slash');
+      iconToggle.classList.add('fa-eye');
+      passToggle.type = "password";
+
+    }
+}
+
+  const loginBtn = document.getElementById('loginBtn');
+  const registerBtn = document.getElementById('registerBtn');
+  const loginForm = document.getElementById('login') ;
+  const registerForm = document.getElementById('register');
+
+
+  loginBtn.addEventListener('click', ()=>{
+    loginBtn.classList.add('toggle');
+    registerBtn.classList.remove('toggle');
+
+    loginForm.style.display ='block';
+    registerForm.style.display ='none';
+  });
+
+  registerBtn.addEventListener('click', ()=>{
+    loginForm.style.display = 'none';
+    registerForm.style.display = 'block';
+    registerBtn.classList.add('toggle');
+    loginBtn.classList.remove('toggle');
+
+  
+  });
+  
+
+
+  </script>
+
+<%- include('footer') %>
+
+</body>
+</html>

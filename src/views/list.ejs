@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../public/css/list.css">
+</head>
+<body>
+    <%- include('header') %>
+    <div style="margin-top: 60px;">
+        <a href="/add_user">Add New User</a>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Content</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% users.forEach(user => { %>
+                    <tr>
+                        <td><%= user.name %></td>
+                        <td><%= user.email %></td>
+                        <td><%= user.phone %></td>
+                        <td class="content-column"><%= user.content %></td>
+                        <td>
+                            <button class="fix edit">
+                                <a href="/edit_user/<%= user._id %>">Edit</a>
+                            </button>
+                            <button class="fix delete">
+                                <a href="/delete_user/<%= user._id %>">Delete</a>
+                            </button>
+                        </td>
+                    </tr>
+                <% }) %>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>

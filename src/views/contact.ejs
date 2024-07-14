@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liên Hệ</title>
+    <link rel="shortcut icon" href="../public/images/logo1-removebg.png" type="image/x-icon"  >
+
+</head>
+<body>
+    <%- include('header') %>
+
+       
+    <div class="contact-container">
+        <div class="write-us">
+            <h2>Liên hệ với chúng tôi</h2>
+            <form action="/add_user" method="post" id="contactForm">
+                <input type="text" id="name" name="name" placeholder="Họ và Tên" required>
+
+                <input type="text" id="phone" name="phone" placeholder="Điện thoại" required><br>
+
+                <input type="email" id="email" name="email" placeholder="Email" required><br>
+                <textarea type="text" id="content" name="content" placeholder="Nội dung" required></textarea><br>
+                <button type="submit" class="send">Gửi đi</button>
+            </form>
+        </div>
+        <div class="contact-info">
+            <h2>Thông tin liên lạc</h2>
+            <ul>
+                <li><i class="fa-solid fa-location-dot speech"></i><b>Địa chỉ:</b>Hà Nội, Việt Nam</li>
+                <li><i class="fa-solid fa-phone speech"></i><b>Số điện thoại:</b> +8423424231</li>
+                <li><i class="fa-solid fa-envelope speech"></i><b>Email:</b> tdv@gmail.com</li>
+                <li><i class="fa-solid fa-globe speech"></i><b>Website:</b> badmintonvip.com</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="popup center">
+        <div class="icon">
+            <i class="fa fa-check"></i>
+        </div>
+        <div class="title">
+            Thành Công !
+        </div>
+        <div class="description">
+            Bạn đã gửi thông tin đi thành công
+        </div>
+        <div class="ok-btn">
+            <button id="ok-pop">OK</button>
+        </div>
+    </div>
+
+    <div class="overlay1"></div>
+    
+    
+
+  
+
+<%- include('footer') %>
+<link rel="stylesheet" href="../public/css/contact.css">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+
+    $(document).ready(function(){
+        $('#contactForm').on('submit', function(event){
+            event.preventDefault(); 
+    
+            var name = $('#name').val();
+            var phone = $('#phone').val();
+            var email = $('#email').val();
+            var content = $('#content').val();
+    
+            if(name !== '' && phone !== '' && email !== '' && content !== '') {
+                // Gửi dữ liệu lên server 
+                $.ajax({
+                    url: '/add_user',
+                    method: 'POST',
+                    data: {
+                        name: name,
+                        phone: phone,
+                        email: email,
+                        content: content
+                    },
+                    success: function(response) {
+                        $('.popup').addClass('active');
+                        $('.overlay1').addClass('active');
+    
+                        $('#ok-pop').click(function() {
+                            
+                            window.location.href = '/'; //redirct for home
+                        });
+                    },
+                    error: function(xhr, status, error) {
+                        console.error('Lỗi khi gửi dữ liệu form: ', error);
+                    }
+                });
+            }
+        });
+    });
+    
+   
+</script>
+
+
+</body>
+</html>

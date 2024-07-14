@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../public/css/badminton.css">
+
+    <link rel="shortcut icon" href="../public/images/logo1-removebg.png" type="image/x-icon" >
+
+    <!--link to fonts-google-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <%- include('header') %>
+    
+    <div class="main-pro">
+    <!--srcoll to top-->
+    <div class="btnScrollToTop" >
+        <i class="material-icons">arrow_upward</i>
+    </div>
+    <!--overlay-->
+    <div class="overlay"></div>
+
+        <aside class="filter">
+            <h1 style="font-size: 40px; font-family: 'Montserrat', sans-serif;">Bộ Lọc</h1>
+            <i class="fa"></i>
+
+            <div class="search">
+                <h2 style="color: #1E90FF;">Tìm kiếm</h2>
+                <div class="bor-search">
+                    <input type="text" placeholder="Tìm kiếm" id="input">
+                    <i class='bx bx-search bor'></i>
+                </div>
+            </div>
+
+            <div class="title">
+                <h2>Danh mục sản phẩm</h2>
+                <div class="box-pro">
+                    <ul class="vendor">
+                        <li>
+                            <label >
+                                <input type="checkbox"  class="category-filter" value="yonex">
+                                YONEX
+                            </label>
+                        </li>
+                        <li>
+                            <label >
+                                <input type="checkbox"  class="category-filter" value="lining">
+                                LINING
+                            </label>
+                        </li>
+                        <li>
+                            <label >
+                                <input type="checkbox"  class="category-filter" value="flypower" >
+                                FLYPOWER
+                            </label>
+                        </li>
+                        <li>
+                            <label >
+                                <input type="checkbox"  class="category-filter" value="mizuno">
+                                MIZUNO
+                            </label>
+                        </li>
+                        <li>
+                            <label >
+                                <input type="checkbox"  class="category-filter" value="victor">
+                                VICTOR
+                            </label>
+                        </li>
+                        <li>
+                            <label >
+                                <input type="checkbox"  class="category-filter" value="kumpoo" >
+                                KUMPOO
+                            </label>
+                        </li>
+                        <li>
+                            <label >
+                                <input type="checkbox"  class="category-filter" value="apacs" >
+                                APACS
+                            </label>
+                        </li>
+
+
+                    </ul>
+                    
+                   
+                </div>
+            </div>
+
+            <div class="title">
+                <h2>Giá sản phẩm</h2>
+                <div class="box-pro">
+                    <ul class="vendor">
+                        <li>
+                            <label >
+                                <input type="checkbox" class="price-filter" data-min="0" data-max="500"  >
+                                Giá dưới 500.000 đ
+                            </label>
+                        </li>
+                        <li>
+                            <label >
+                                <input type="checkbox" class="price-filter" data-min="500" data-max="1000"  >
+                                500.000 đ - 1 triệu
+                            </label>
+                        </li>
+                        <li>
+                            <label >
+                                <input type="checkbox" class="price-filter" data-min="1000" data-max="2000" >
+                                1 triệu - 2 triệu
+                            </label>
+                        </li>
+                        <li>
+                            <label >
+                                <input type="checkbox" class="price-filter" data-min="2000" data-max="3000" >
+                                2 triệu - 3 triệu
+                            </label>
+                        </li>
+                        <li>
+                            <label >
+                                <input type="checkbox" class="price-filter" data-min="3000" data-max="10000"  >
+                                Giá trên 3 triệu 
+                            </label>
+                        </li>
+                        
+
+                    </ul>
+                    
+                   
+                </div>
+            </div>
+
+            <div class="title">
+                <h2>Lối Chơi</h2>
+                <div class="box-pro">
+                    <ul class="vendor">
+                        <li>
+                            <label >
+                                <input type="checkbox" class="style-filter" value="attack">
+                                Tấn Công
+                            </label>
+                        </li>
+                        <li>
+                            <label >
+                                <input type="checkbox" class="style-filter" value="defense">
+                                Phòng Thủ
+                            </label>
+                        </li>
+                        <li>
+                            <label >
+                                <input type="checkbox" class="style-filter" value="balanced" >
+                                Công Thủ Toàn Diện
+                            </label>
+                        </li>
+                        
+                    </ul>
+                    
+                   
+                </div>
+            </div>
+
+            <div class="title">
+                <h2>Trọng Lượng</h2>
+                <div class="box-pro">
+                    <ul class="vendor">
+                        <li>
+                            <label >
+                                <input type="checkbox"  class="weight-filter" value="2U">
+                                2U: 90 - 94g
+                            </label>
+                        </li>
+                        <li>
+                            <label >
+                                <input type="checkbox"  class="weight-filter" value="3U" >
+                                3U: 85 - 89g
+                            </label>
+                        </li>
+                        <li>
+                            <label >
+                                <input type="checkbox"  class="weight-filter" value="4U"  >
+                                4U: 80 - 84g
+                            </label>
+                        </li>
+                    </ul>
+                    
+                   
+                </div>
+            </div>
+
+            <div class="title">
+                <h2>Độ Cứng</h2>
+                <div class="box-pro">
+                    <ul class="vendor">
+                        <li>
+                            <label >
+                                <input type="checkbox"  class="stone-filter" value="cung">
+                                Cứng
+                            </label>
+                        </li>
+                        <li>
+                            <label >
+                                <input type="checkbox"  class="stone-filter" value="deo">
+                                Dẻo
+                            </label>
+                        </li>
+                        <li>
+                            <label >
+                                <input type="checkbox"  class="stone-filter" value="trungbinh">
+                                Trung Bình 
+                            </label>
+                        </li>
+                       
+                       
+                    </ul>
+                    
+                   
+                </div>
+            </div>
+
+            <video width="200px" autoplay loop>
+                <source src="../public/images/Badminton Match Nigh.mp4" type="video/mp4" >
+            </video>
+            
+
+           
+
+
+
+        </aside>
+
+        <div class="all-pro">
+            <div class="title-pro">
+                <div class="head-title">
+                    <h1 style="font-size: 40px;padding-left: 20px;font-family: 'Montserrat', sans-serif;">Vợt Cầu Lông</h1>
+                </div>
+                <div class="sort-by">
+                    <label for="">
+                        Sắp xếp theo:                        
+                    </label>
+                    <select name="" id="drop">
+                            <option value="">Vui lòng chọn</option>
+                            <option value="new">Mới nhất</option>
+                            <option value="priceDesc">Giá giảm dần</option>
+                            <option value="priceAsc">Giá tăng dần</option>
+                            <option value="old">Cũ nhất</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row">
+                <!--Box 1-->
+                <div class="col3" data-category="yonex" data-price="1500" data-weight="2U" data-style="attack" data-stone="cung" data-date ="2023-08-20">
+                    <div class="item_product_main">
+                        <div class="products-img">
+                            <a href="/product/yonex-astrox-88d" target="_blank">
+                                <img src="../public/images/yonex-88d-pro.webp" alt="" >
+                            </a>
+                            <button class="add-to-cart add-cart"><i class='bx bx-cart'></i></button>
+                        </div>
+                        <div class="sale-off">
+                            <h4>-12%</h4>
+                        </div>
+                        <div class="products-info">
+                            <div class="products-name">
+                                <a href="/product/yonex-astrox-88d" target="_blank">VỢT CẦU LÔNG YONEX ASTROX 88D PRO</a>
+                                <span ><em>923 lượt bán</em></span>
+
+                            </div>
+                            <div class="products-price">
+                                <span class="price">1.800.000 đ</span>
+                                <span class="compare-price">2.590.000 đ</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Box 2-->
+                <div class="col3" data-category="yonex" data-price="2200" data-weight="4U" data-style="defense" data-stone="deo" data-date ="2023-06-10">
+                    <div class="item_product_main">
+                        <div class="products-img">
+                            <a href="/product/yonex-astrox-88d" target="_blank">
+                                <img src="../public/images/yonex-astrox-02-feel.webp" alt="" >
+                            </a>
+                            <button class="add-to-cart add-cart"><i class='bx bx-cart ' ></i></button>
+                            
+                        </div>
+                        <div class="sale-off">
+                            <h4>-21%</h4>
+                        </div>
+                        <div class="products-info">
+                            <div class="products-name">
+                                <a href="/product/yonex-astrox-88d" target="_blank">VỢT CẦU LÔNG YONEX ASTROX 02 FEEL</a>
+                                <span ><em>832 lượt bán</em></span>
+                            </div>
+                            <div class="products-price">
+                                <span class="price">2.200.000 đ</span>
+                                <span class="compare-price">2.800.000 đ</span>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Box 3-->
+                <div class="col3" data-category="flypower" data-price="1500" data-weight="3U" data-style="balanced" data-stone="trungbinh" data-date = "2024-01-06">
+                    <div class="item_product_main">
+                        <div class="products-img">
+                            <a href="/product/yonex-astrox-88d" target="_blank">
+                                <img src="../public/images/flypower-rio-gold.webp" alt="" >
+                            </a>
+                            <button class="add-to-cart add-cart"><i class='bx bx-cart' ></i></button>
+
+                        </div>
+                        <div class="sale-off">
+                            <h4>-34%</h4>
+                        </div>
+                        <div class="products-info">
+                            <div class="products-name">
+                                <a href="/product/yonex-astrox-88d" target="_blank">VỢT CẦU LÔNG FLYPOWER RIO GOLD G1</a>
+                                <span ><em>82 lượt bán</em></span>
+                            </div>
+                            <div class="products-price">
+                                <span class="price">1.500.000 đ</span>
+                                <span class="compare-price">2.150.000 đ</span>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Box 4-->
+                <div class="col3" data-category="mizuno" data-price="1750" data-weight="2U" data-style="attack" data-stone="cung" data-date="2023-05-12">
+                    <div class="item_product_main">
+                        <div class="products-img">
+                            <a href="/product/yonex-astrox-88d" target="_blank">
+                                <img src="../public/images/mizuno-promax-rx9.webp" alt="" >
+                            </a>
+                            <button class="add-to-cart add-cart"><i class='bx bx-cart' ></i></button>
+
+                        </div>
+                        <div class="sale-off">
+                            <h4>-22%</h4>
+                        </div>
+                        <div class="products-info">
+                            <div class="products-name">
+                                <a href="/product/yonex-astrox-88d" target="_blank">VỢT CẦU LÔNG MIZUNO PROMAX RX9</a>
+                                <span ><em>122 lượt bán</em></span>
+                            </div>
+                            <div class="products-price">
+                                <span class="price">1.750.000 đ</span>
+                                <span class="compare-price">2.100.000 đ</span>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Box 5-->
+                <div class="col3" data-category="lining" data-price="5200" data-weight="3U" data-style="attack" data-stone="deo" data-date="2024-05-12">
+                    <div class="item_product_main">
+                        <div class="products-img">
+                            <a href="/product/yonex-astrox-88d" target="_blank">
+                                <img src="../public/images/lining-halbertec-9000.webp" alt="" >
+                            </a>
+                            <button class="add-to-cart add-cart"><i class='bx bx-cart' ></i></button>
+
+                        </div>
+                        <div class="sale-off">
+                            <h4>-40%</h4>
+                        </div>
+                        <div class="products-info">
+                            <div class="products-name">
+                                <a href="/product/yonex-astrox-88d" target="_blank">Vợt Cầu Lông Lining Halbertec 9000</a>
+                                <span ><em>732 lượt bán</em></span>
+
+                            </div>
+                            <div class="products-price">
+                                <span class="price">5.200.000 ₫</span>
+                                <span class="compare-price">2.590.000 đ</span>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Box 6-->
+                <div class="col3" data-category="lining" data-price="2300" data-weight="4U" data-style="balanced" data-stone="cung" data-date="2022-12-15">
+                    <div class="item_product_main">
+                        <div class="products-img">
+                            <a href="/product/yonex-astrox-88d" target="_blank">
+                                <img src="../public/images/lining-tectonic-6.webp" alt="" >
+                            </a>
+                            <button class="add-to-cart add-cart"><i class='bx bx-cart' ></i></button>
+                        </div>
+                        <div class="sale-off">
+                            <h4>-9%</h4>
+                        </div>
+                        <div class="products-info">
+                            <div class="products-name">
+                                <a href="/product/yonex-astrox-88d" target="_blank">VỢT CẦU LÔNG LINING TECTONIC 6</a>
+                                <span ><em>32 lượt bán</em></span>
+
+                            </div>
+                            <div class="products-price">
+                                <span class="price">2.300.000 đ</span>
+                                <span class="compare-price">2.760.000 đ</span>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Box 7-->
+                <div class="col3" data-category="victor" data-price="5200" data-weight="3U" data-style="defense" data-stone="cung" data-date="2024-05-02">
+                    <div class="item_product_main">
+                        <div class="products-img">
+                            <a href="/product/yonex-astrox-88d" target="_blank">
+                                <img src="../public/images/victor-mjolnir-metallic.webp" alt="" >
+                            </a>
+                            <button class="add-to-cart add-cart"><i class='bx bx-cart' ></i></button>
+                        </div>
+                        <div class="sale-off">
+                            <h4>-45%</h4>
+                        </div>
+                        <div class="products-info">
+                            <div class="products-name">
+                                <a href="/product/yonex-astrox-88d" target="_blank">VỢT CẦU VICTOR MJOLNIR METALLIC</a>
+                                <span ><em>75 lượt bán</em></span>
+
+                            </div>
+                            <div class="products-price">
+                                <span class="price">5.200.000 ₫</span>
+                                <span class="compare-price">2.590.000 đ</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Box 8-->
+                <div class="col3" data-category="apacs" data-price="1879" data-weight="2U" data-style="attack" data-stone="deo" data-date="2023-12-05">
+                    <div class="item_product_main">
+                        <div class="products-img">
+                            <a href="/product/yonex-astrox-88d" target="_blank">
+                                <img src="../public/images/apacs-pro-commander.webp" alt="" >
+                            </a>
+                            <button class="add-to-cart add-cart"><i class='bx bx-cart' ></i></button>
+
+                        </div>
+                        <div class="sale-off">
+                            <h4>-23%</h4>
+                        </div>
+                        <div class="products-info">
+                            <div class="products-name">
+                                <a href="/product/yonex-astrox-88d" target="_blank">VỢT CẦU LÔNG APACS PRO COMMANDER</a>
+                                <span ><em>532 lượt bán</em></span>
+
+                            </div>
+                            <div class="products-price">
+                                <span class="price">1.879.000 ₫</span>
+                                <span class="compare-price">2.590.000 đ</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Box 9-->
+                <div class="col3" data-category="victor" data-price="3600" data-weight="4U" data-style="balanced" data-stone="trungbinh" data-date="2023-10-18">
+                    <div class="item_product_main">
+                        <div class="products-img">
+                            <a href="/product/yonex-astrox-88d" target="_blank">
+                                <img src="../public/images/victor-ryuga-d.webp" alt="" >
+                            </a>
+                            <button class="add-to-cart add-cart"><i class='bx bx-cart' ></i></button>
+
+                        </div>
+                        <div class="sale-off">
+                            <h4>-15%</h4>
+                        </div>
+                        <div class="products-info">
+                            <div class="products-name">
+                                <a href="/product/yonex-astrox-88d" target="_blank">Vợt Cầu Lông Victor Ryuga D</a>
+                                <span ><em>132 lượt bán</em></span>
+
+                            </div>
+                            <div class="products-price">
+                                <span class="price">3.600.000 đ</span>
+                                <span class="compare-price">4.320.000 đ</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Box 10-->
+                <div class="col3" data-category="kumpoo" data-price="790" data-weight="3U" data-style="attack" data-stone="cung" data-date="2024-03-19">
+                    <div class="item_product_main" >
+                        <div class="products-img">
+                            <a href="/product/yonex-astrox-88d" target="_blank">
+                                <img src="../public/images/kumpoo-power-balanced-11.jpg" alt="" >
+                            </a>
+                            <button class="add-to-cart add-cart"><i class='bx bx-cart' ></i></button>
+
+                        </div>
+                        <div class="sale-off">
+                            <h4>-8%</h4>
+                        </div>
+                        <div class="products-info">
+                            <div class="products-name">
+                                <a href="/product/yonex-astrox-88d" target="_blank">Vợt Cầu Lông Kumpoo Power 11 Xanh</a>
+                                <span ><em>154 lượt bán</em></span>
+
+                            </div>
+                            <div class="products-price">
+                                <span class="price">790.000 ₫</span>
+                                <span class="compare-price">948.000 đ</span>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Box 11-->
+                <div class="col3" data-category="victor" data-price="970" data-weight="4U" data-style="balanced" data-stone="trungbinh" data-date="2024-06-12">
+                    <div class="item_product_main" data-category="victor">
+                        <div class="products-img">
+                            <a href="/product/yonex-astrox-88d" target="_blank">
+                                <img src="../public/images/victor-tk-fh-tim.jpg" alt="" >
+                            </a>
+                            <button class="add-to-cart add-cart"><i class='bx bx-cart' ></i></button>
+
+                        </div>
+                        <div class="sale-off">
+                            <h4>-10%</h4>
+                        </div>
+                        <div class="products-info">
+                            <div class="products-name">
+                                <a href="/product/yonex-astrox-88d" target="_blank">Vợt Cầu Lông Victor TK-FH Tím</a>
+                                <span ><em>332 lượt bán</em></span>
+
+                            </div>
+                            <div class="products-price">
+                                <span class="price">970.000 ₫</span>
+                                <span class="compare-price">1.164.000 ₫</span>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Box 12-->
+                <div class="col3" data-category="lining" data-price="1300" data-weight="3gU" data-style="defense" data-stone="deo" data-date="2024-02-18">
+                    <div class="item_product_main">
+                        <div class="products-img">
+                            <a href="/product/yonex-astrox-88d" target="_blank">
+                                <img src="../public/images/lining-bladex-200.webp" alt="" >
+                            </a> 
+                            <button class="add-to-cart add-cart"><i class='bx bx-cart'></i></button>
+                        </div>
+                        <div class="sale-off">
+                            <h4>-48%</h4>
+                        </div>
+                        <div class="products-info">
+                            <div class="products-name">
+                                <a href="/product/yonex-astrox-88d" target="_blank">Vợt Cầu Lông Lining Bladex 200</a>
+                                <span ><em>232 lượt bán</em></span>
+
+                            </div>
+                            <div class="products-price">
+                                <span class="price">1.300.000 ₫</span>
+                                <span class="compare-price">2.590.000 đ</span>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+      
+    </div>
+    <div class="brand-info">
+            <h1>Các hãng vợt cầu lông</h1>
+
+            <div class="brand-content">
+                <h2>1.YONEX</h2>
+                <p>
+                    <span>
+                        Yonex là một thương hiệu cầu lông hàng đầu thế giới, được thành lập vào năm 1946 tại Nhật Bản bởi Minoru Yoneyama. Ban đầu, công ty sản xuất các loại phao câu cá nhưng sau đó đã chuyển sang sản xuất vợt cầu lông và tennis, và nhanh chóng trở thành biểu tượng của chất lượng và công nghệ tiên tiến.
+                    </span>
+
+                    <span>
+                        <h3>Đặc điểm nổi bật:</h3>
+                        <ul>
+                            <li>
+                                <strong> Công nghệ tiên tiến:</strong> Yonex được biết đến với nhiều công nghệ độc đáo như Isometric (tăng diện tích điểm ngọt của vợt), Nanoscience (tăng độ cứng và bền của khung vợt), và Dual Optimum System (tối ưu hóa lực đánh và kiểm soát).
+                            </li>
+                            <li>
+                                <strong>Độ bền và hiệu suất:</strong> Các vợt cầu lông của Yonex được thiết kế để đảm bảo độ bền cao và hiệu suất tốt nhất. Nhiều vận động viên cầu lông hàng đầu thế giới sử dụng vợt Yonex.
+                            </li>
+                            <li>
+                                <strong>Sản phẩm đa dạng:</strong> Yonex cung cấp một loạt các sản phẩm bao gồm vợt cầu lông, giày, quần áo và phụ kiện cầu lông.
+                            </li>
+                        </ul>
+                    </span>
+                </p>
+                <img src="../public/images/YONEX.webp" alt=""  >
+            </div>
+
+            <div class="brand-content hiddens" id="div1">
+                <h2>2.LINING</h2>
+                <p>
+                    <span>
+                        Li-Ning là một thương hiệu thể thao lớn của Trung Quốc, được thành lập vào năm 1990 bởi nhà vô địch thể dục dụng cụ Li Ning. Hãng nhanh chóng trở thành một trong những thương hiệu cầu lông hàng đầu thế giới.
+                    </span>
+
+                    <span>
+                        <h3>Đặc điểm nổi bật:</h3>
+                        <ul>
+                            <li>
+                                <strong> Công nghệ tiên tiến:</strong> Li-Ning sử dụng các công nghệ tiên tiến để tạo ra các sản phẩm có hiệu suất cao, phù hợp với yêu cầu của các vận động viên chuyên nghiệp.
+                            </li>
+                            <li>
+                                <strong>Sản phẩm đa dạng:</strong> Li-Ning cung cấp nhiều dòng vợt nổi bật như N90, N50, Windstorm và Turbocharging.
+                            <li>
+                                <strong>Thiết kế sáng tạo:</strong> Các sản phẩm của Li-Ning có thiết kế sáng tạo và hiện đại, thường được sử dụng bởi các vận động viên hàng đầu thế giới.
+                            </li>
+                        </ul>
+                    </span>
+                </p>
+                <img src="../public/images/YONEX.webp" alt="">
+
+            </div>
+
+            <div class="brand-content hiddens" id="div2">
+                <h2>3.LINING</h2>
+                <p>
+                    <span>
+                        Yonex là một thương hiệu cầu lông hàng đầu thế giới, được thành lập vào năm 1946 tại Nhật Bản bởi Minoru Yoneyama. Ban đầu, công ty sản xuất các loại phao câu cá nhưng sau đó đã chuyển sang sản xuất vợt cầu lông và tennis, và nhanh chóng trở thành biểu tượng của chất lượng và công nghệ tiên tiến.
+                    </span>
+
+                    <span>
+                        <h3>Đặc điểm nổi bật:</h3>
+                        <ul>
+                            <li>
+                                <strong> Công nghệ tiên tiến:</strong> Yonex được biết đến với nhiều công nghệ độc đáo như Isometric (tăng diện tích điểm ngọt của vợt), Nanoscience (tăng độ cứng và bền của khung vợt), và Dual Optimum System (tối ưu hóa lực đánh và kiểm soát).
+                            </li>
+                            <li>
+                                <strong>Độ bền và hiệu suất:</strong> Các vợt cầu lông của Yonex được thiết kế để đảm bảo độ bền cao và hiệu suất tốt nhất. Nhiều vận động viên cầu lông hàng đầu thế giới sử dụng vợt Yonex.
+                            </li>
+                            <li>
+                                <strong>Sản phẩm đa dạng:</strong> Yonex cung cấp một loạt các sản phẩm bao gồm vợt cầu lông, giày, quần áo và phụ kiện cầu lông.
+                            </li>
+                        </ul>
+                    </span>
+                </p>
+                <img src="../public/images/YONEX.webp" alt="">
+
+            </div>
+
+            <div class="brand-content hiddens" id="div3">
+                <h2>4.LINING</h2>
+                <p>
+                    <span>
+                        Yonex là một thương hiệu cầu lông hàng đầu thế giới, được thành lập vào năm 1946 tại Nhật Bản bởi Minoru Yoneyama. Ban đầu, công ty sản xuất các loại phao câu cá nhưng sau đó đã chuyển sang sản xuất vợt cầu lông và tennis, và nhanh chóng trở thành biểu tượng của chất lượng và công nghệ tiên tiến.
+                    </span>
+
+                    <span>
+                        <h3>Đặc điểm nổi bật:</h3>
+                        <ul>
+                            <li>
+                                <strong> Công nghệ tiên tiến:</strong> Yonex được biết đến với nhiều công nghệ độc đáo như Isometric (tăng diện tích điểm ngọt của vợt), Nanoscience (tăng độ cứng và bền của khung vợt), và Dual Optimum System (tối ưu hóa lực đánh và kiểm soát).
+                            </li>
+                            <li>
+                                <strong>Độ bền và hiệu suất:</strong> Các vợt cầu lông của Yonex được thiết kế để đảm bảo độ bền cao và hiệu suất tốt nhất. Nhiều vận động viên cầu lông hàng đầu thế giới sử dụng vợt Yonex.
+                            </li>
+                            <li>
+                                <strong>Sản phẩm đa dạng:</strong> Yonex cung cấp một loạt các sản phẩm bao gồm vợt cầu lông, giày, quần áo và phụ kiện cầu lông.
+                            </li>
+                        </ul>
+                    </span>
+                </p>
+                <img src="../public/images/YONEX.webp" alt="">
+
+            </div>
+
+            <div class="brand-content hiddens" id="div4">
+                <h2>5.LINING</h2>
+                <p>
+                    <span>
+                        Yonex là một thương hiệu cầu lông hàng đầu thế giới, được thành lập vào năm 1946 tại Nhật Bản bởi Minoru Yoneyama. Ban đầu, công ty sản xuất các loại phao câu cá nhưng sau đó đã chuyển sang sản xuất vợt cầu lông và tennis, và nhanh chóng trở thành biểu tượng của chất lượng và công nghệ tiên tiến.
+                    </span>
+
+                    <span>
+                        <h3>Đặc điểm nổi bật:</h3>
+                        <ul>
+                            <li>
+                                <strong> Công nghệ tiên tiến:</strong> Yonex được biết đến với nhiều công nghệ độc đáo như Isometric (tăng diện tích điểm ngọt của vợt), Nanoscience (tăng độ cứng và bền của khung vợt), và Dual Optimum System (tối ưu hóa lực đánh và kiểm soát).
+                            </li>
+                            <li>
+                                <strong>Độ bền và hiệu suất:</strong> Các vợt cầu lông của Yonex được thiết kế để đảm bảo độ bền cao và hiệu suất tốt nhất. Nhiều vận động viên cầu lông hàng đầu thế giới sử dụng vợt Yonex.
+                            </li>
+                            <li>
+                                <strong>Sản phẩm đa dạng:</strong> Yonex cung cấp một loạt các sản phẩm bao gồm vợt cầu lông, giày, quần áo và phụ kiện cầu lông.
+                            </li>
+                        </ul>
+                    </span>
+                </p>
+                <img src="../public/images/YONEX.webp" alt="">
+
+            </div>
+
+            <div class="brand-content hiddens" id="div5">
+                <h2>6.LINING</h2>
+                <p>
+                    <span>
+                        Yonex là một thương hiệu cầu lông hàng đầu thế giới, được thành lập vào năm 1946 tại Nhật Bản bởi Minoru Yoneyama. Ban đầu, công ty sản xuất các loại phao câu cá nhưng sau đó đã chuyển sang sản xuất vợt cầu lông và tennis, và nhanh chóng trở thành biểu tượng của chất lượng và công nghệ tiên tiến.
+                    </span>
+
+                    <span>
+                        <h3>Đặc điểm nổi bật:</h3>
+                        <ul>
+                            <li>
+                                <strong> Công nghệ tiên tiến:</strong> Yonex được biết đến với nhiều công nghệ độc đáo như Isometric (tăng diện tích điểm ngọt của vợt), Nanoscience (tăng độ cứng và bền của khung vợt), và Dual Optimum System (tối ưu hóa lực đánh và kiểm soát).
+                            </li>
+                            <li>
+                                <strong>Độ bền và hiệu suất:</strong> Các vợt cầu lông của Yonex được thiết kế để đảm bảo độ bền cao và hiệu suất tốt nhất. Nhiều vận động viên cầu lông hàng đầu thế giới sử dụng vợt Yonex.
+                            </li>
+                            <li>
+                                <strong>Sản phẩm đa dạng:</strong> Yonex cung cấp một loạt các sản phẩm bao gồm vợt cầu lông, giày, quần áo và phụ kiện cầu lông.
+                            </li>
+                        </ul>
+                    </span>
+                </p>
+                <img src="../public/images/YONEX.webp" alt="">
+
+            </div>
+
+            <button id="toggleButton" onclick="toggleContent()">Xem thêm &#9660;</button>
+
+            
+    </div>
+
+
+
+
+<%- include('footer') %>
+<script src="../public/js/badminton.js"></script>
+</body>
+</html>

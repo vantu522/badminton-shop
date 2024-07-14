@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%- title %></title>
+    <link rel="stylesheet" href="../public/css/admin.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="shortcut icon" href="../public/images/logo1-removebg.png" type="image/x-icon"  >
+
+
+</head>
+<body>
+
+    <section id="menu">
+        <div class="logo">
+            <h2>Dashboard</h2>
+        </div>
+
+        <div class="items">
+            <li> <i class="fa-solid fa-address-book"></i><a href="/admin">Liên Lạc</a></li>
+            <li> <i class="fas fa-shopping-cart"></i><a href="/admin/order">Đặt hàng</a></li>
+            <li> <i class="fa-solid fa-gear"></i><a href="">Cài đặt</a></li>
+            <li> <i class="fas fa-question-circle"></i><a href="">Trợ giúp</a></li>
+
+        </div>
+    </section>
+
+    <section id="interface">
+        <div class="navigation">
+            <div class="n1">
+                <a href="/"> <i class="fa-solid fa-house"></i></a>
+            </div>
+            <div class="d">
+                <h2>Liên Lạc</h2>
+            </div>
+            <div class="profile">
+                <i class="fa fa-bell"></i>
+                <img src="../public/images/ava-admin.png" alt="">
+            </div>
+        </div>
+
+        <h3 class="i-name">Điều khiển</h3>
+
+
+        <div class="values">
+            <div class="val-box">
+                <i class="fas fa-users"></i>
+                <div>
+                    <h3>1,432</h3>
+                    <span>Khách hàng mới</span>
+                </div>
+            </div>
+            <div class="val-box">
+                <i class="fas fa-shopping-cart"></i>
+                <div>
+                    <h3>823</h3>
+                    <span>Đơn hàng</span>
+                </div>
+            </div><div class="val-box">
+                <i class="fas fa-dollar-sign"></i>
+                <div>
+                    <h3>242.234.231 đ</h3>
+                    <span>Doanh thu</span>
+                </div>
+            </div><div class="val-box">
+                <i class="fa-solid fa-receipt"></i>
+                <div>
+                    <h3>3,432</h3>
+                    <span>Số lượng bán</span>
+                </div>
+            </div>
+        </div>
+
+        <div >
+            <table>
+                <thead>
+                    <tr>
+                        <th>Họ tên</th>
+                        <th>Số điện thoại</th>
+                        <th>Email</th>
+                        <th>Nội dung</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% users.forEach(user => { %>
+                        <tr>
+                            <td><%= user.name %></td>
+                            <td><%= user.phone %></td>
+                            <td><%= user.email %></td>
+
+                            <td class="content-column"><%= user.content %></td>
+                            <td>
+                                <button class="fix edit">
+                                    <a href="/edit_user/<%= user._id %>">Edit</a>
+                                </button>
+                                <button class="fix delete">
+                                    <a href="/delete_user/<%= user._id %>">Delete</a>
+                                </button>
+                            </td>
+                        </tr>
+                    <% }) %>
+                </tbody>
+            </table>
+        </div>
+    
+    </section>
+    
+
+    
+    
+</body>
+</html>
