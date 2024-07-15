@@ -50,7 +50,6 @@ app.use('/public', express.static(path.join(__dirname, 'public')));
 
 // Routes
 app.use('/', webRoutes);
-app.use('/product', webProduct);
 app.use('/admin',webAdmin);
 
 

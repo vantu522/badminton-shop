@@ -94,7 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Nút mua hàng
     function buyButtonClicked() {
-        
+        alert('Bạn đã đặt hàng thành công')
         var cartContent = document.getElementsByClassName('cart-content')[0];
         while (cartContent.hasChildNodes()) {
             cartContent.removeChild(cartContent.firstChild);
@@ -206,9 +206,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-
-
-
     // Slider
     const myslide = document.querySelectorAll('.myslider');
     const dot = document.querySelectorAll('.dot');
@@ -266,24 +263,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 
-    // // Bộ lọc
-    // const filterButtons = document.querySelectorAll('.filter_button button');
-
-    // // Định nghĩa filterCards
-    // const filterCards = e => {
-    //     const activeFilter = document.querySelector(".btn-filter.act");
-    //     if (activeFilter) {
-    //         activeFilter.classList.remove('act');
-    //     }
-    //     e.target.classList.add("act");
-
-    // };
-
-    // Thêm sự kiện click
-    // filterButtons.forEach(button => button.addEventListener('click', filterCards));
-
-    // Bộ lọc
-    const navItems = document.querySelectorAll('.text .text-head');
    
 
     

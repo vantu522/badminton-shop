@@ -171,6 +171,9 @@ aside{
     position: relative;
 }
 
+.item_product_main a{
+    cursor: pointer;
+}
 
 .products-img img{
     transition: transform 0.5s ease;
@@ -274,7 +277,7 @@ aside{
 
 }
 .brand-info.active{
-    margin-bottom: 3550px;
+    margin-bottom: 2750px;
 
 
 }

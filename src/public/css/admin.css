@@ -114,6 +114,11 @@ font-weight: 400;
     border-radius: 50%;
 }
 
+.n1 a{
+    padding: 10px;
+    font-size: 24px;
+}
+
 .i-name{
     color: #444a53;
     padding: 30px 30px 0px 30px ;

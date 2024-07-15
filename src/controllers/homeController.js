@@ -95,7 +95,7 @@ const loginsAdmin = async(req, res) => {
 const admin = async(req, res) =>{
     const users = await UserModel.find();
 
-    res.render('admin.ejs', { title: 'Admin', users})
+    res.render('admin.ejs', { title: 'Liên lạc', users})
 }
 
 const order = async(req, res) =>{
