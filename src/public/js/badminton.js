@@ -1,3 +1,4 @@
+// LÀM BỘ LỌC 
 document.addEventListener('DOMContentLoaded', () => {
     const categoryCheckboxes = document.querySelectorAll('.category-filter');
     categoryCheckboxes.forEach(checkbox => {
@@ -102,7 +103,7 @@ document.getElementById('drop').addEventListener('change', function(){
    
 })
 
-// xem thêm
+// Làm phần xem thêm
 
 function toggleContent(){
 

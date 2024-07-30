@@ -21,8 +21,6 @@ const addUser = async (req, res) => {
 };
 
 
-
-
 const editUserPage = async (req, res) => {
     const user = await UserModel.findById(req.params.id);
     res.render('edit_user.ejs', { title: "Edit User", user });
@@ -121,6 +119,4 @@ module.exports = {
     loginsAdmin,
     admin,
     order
-
-    
 };

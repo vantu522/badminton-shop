@@ -735,7 +735,7 @@ transform: scale(1.1);
 .profile-desc span:nth-child(1){
     font-size: 24px;
     font-weight: bold;
-    color: var(--primary-clr);
+    color: rgb(51, 46, 46);
 }
 
 .profile-desc span:nth-child(2){

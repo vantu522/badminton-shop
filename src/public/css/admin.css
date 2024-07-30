@@ -54,11 +54,6 @@ body{
     cursor: pointer;
 }
 
-#menu .items li:nth-child(1){
-    border-left: 4px solid #fff
-
-}
-
 #menu .items li i {
     color: rgb(134,141,151);
     width: 30px;
