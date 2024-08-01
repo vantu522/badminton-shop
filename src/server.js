@@ -14,7 +14,8 @@ const session = require('express-session');
 const app = express();
 const port = process.env.PORT || 8080;
 const hostname = process.env.HOST_NAME;
-const DB = process.env.DB_URI;
+const DB_h = process.env.DB_URI;
+const DB_name = process.env.DB_NAME;
 
 // Config view engine
 configViewEngine(app);
@@ -55,7 +56,7 @@ app.use('/admin',webAdmin);
 
 
 // Connect MongoDB
-mongoose.connect(DB)
+mongoose.connect(`${DB_h}/${DB_name}`)
   .then(() => {
     console.log('Connected to MongoDB');
   })
@@ -68,3 +69,4 @@ app.listen(port, hostname, () => {
   console.log(`Server started at http://${hostname}:${port}`);
 });
   
+

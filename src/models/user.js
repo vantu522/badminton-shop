@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 
+//shape data
 const userContact = new mongoose.Schema({
     name: {
         type: String,
