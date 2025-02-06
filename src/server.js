@@ -8,7 +8,7 @@ const webAdmin = require('./routes/admin')
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const session = require('express-session');
-
+ 
 
 //config
 const app = express();
@@ -24,7 +24,7 @@ configViewEngine(app);
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-app.use(
+app.use( 
   session({
     secret: "my secret key",
     saveUninitialized: true,
@@ -69,4 +69,3 @@ app.listen(port, hostname, () => {
   console.log(`Server started at http://${hostname}:${port}`);
 });
   
-
