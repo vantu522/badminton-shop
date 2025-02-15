@@ -14,7 +14,7 @@ const session = require('express-session');
 const app = express();
 const port = process.env.PORT || 8080;
 const hostname = process.env.HOST_NAME;
-const DB_h = process.env.DB_URI;
+const DB_MONGO = process.env.DB_URI;
 const DB_name = process.env.DB_NAME;
 
 // Config view engine
@@ -56,7 +56,7 @@ app.use('/admin',webAdmin);
 
  
 // Connect MongoDB
-mongoose.connect(`${DB_h}/${DB_name}`)
+mongoose.connect(`${DB_MONGO}/${DB_name}`)
   .then(() => {
     console.log('Connected to MongoDB');
   })
